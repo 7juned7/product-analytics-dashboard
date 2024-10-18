@@ -7,7 +7,7 @@ import { AuthContext } from './Context/AuthContext';
 import { useNavigate, useLocation } from 'react-router-dom';
 
 function App() {
-  const backendUrl = "https://product-analytics-dashboard.onrender.com/"
+  const backendUrl = "https://product-analytics-dashboard.onrender.com"
   const { user, setUser } = useContext(AuthContext);
   const [data, setData] = useState([]);
   const [filteredData, setFilteredData] = useState([]);
