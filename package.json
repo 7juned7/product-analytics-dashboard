@@ -2,7 +2,7 @@
   "name": "product-analytics-platform",
   "version": "1.0.0",
   "description": "Full Stack Product Analytics Platform with React frontend and Express backend",
-  "main": "index.js",
+  "main": "server/server.js",
   "scripts": {
     "start": "npm run start-server",
     "start-server": "cd server && npm start",  
