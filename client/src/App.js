@@ -7,6 +7,7 @@ import { AuthContext } from './Context/AuthContext';
 import { useNavigate, useLocation } from 'react-router-dom';
 
 function App() {
+  const backendUrl = "https://product-analytics-dashboard.onrender.com/"
   const { user, setUser } = useContext(AuthContext);
   const [data, setData] = useState([]);
   const [filteredData, setFilteredData] = useState([]);
@@ -71,7 +72,7 @@ function App() {
   // Memoized fetchData function
   const fetchData = useCallback(async () => {
     try {
-      const res = await axios.get('/api/data'); // Calling the backend API
+      const res = await axios.get(`${backendUrl}/api/data`); // Calling the backend API
       setData(res.data);
 
       const filterPreferences = JSON.parse(localStorage.getItem('filterPreferences'));
